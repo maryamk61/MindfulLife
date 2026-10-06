@@ -180,11 +180,18 @@ a:focus-visible {
   letter-spacing: -.04em;
   line-height: 1.4;
 }
+.intro .eyebrow,
+.section-heading .eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
 .eyebrow .lotus {
-  width: 1.3em;
-  height: 1.3em;
-  vertical-align: -.25em;
-  margin-left: 8px;
+  width: 1.2em;
+  height: 1.2em;
+  flex: none;
+  transform: translateY(.12em);
 }
 .intro .eyebrow {
   color: var(--sage);

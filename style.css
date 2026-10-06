@@ -252,8 +252,6 @@ a:focus-visible {
 .package-card--sand { background: var(--sand); }
 
 .package-top {
-  display: flex;
-  justify-content: space-between;
   font-size: .78rem;
   opacity: .7;
   margin-bottom: 26px;

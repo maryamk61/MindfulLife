@@ -311,7 +311,7 @@ footer {
 }
 footer .logo { font-size: 1rem; }
 footer p { margin: 0; text-align: center; }
-.footer-link { justify-self: end; }
+.footer-links { justify-self: end; display: flex; gap: 20px; }
 .footer-link { border-bottom: 1px solid var(--line); }
 .footer-link:hover { color: var(--brown); }
 
@@ -348,5 +348,5 @@ footer p { margin: 0; text-align: center; }
     text-align: center;
     gap: 8px;
   }
-  .footer-link { justify-self: center; }
+  .footer-links { justify-self: center; }
 }

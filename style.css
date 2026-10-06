@@ -180,6 +180,12 @@ a:focus-visible {
   letter-spacing: -.04em;
   line-height: 1.4;
 }
+.eyebrow .lotus {
+  width: 1.3em;
+  height: 1.3em;
+  vertical-align: -.25em;
+  margin-left: 8px;
+}
 .intro .eyebrow {
   color: var(--sage);
   font-size: 1.35rem;

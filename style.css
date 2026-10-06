@@ -169,6 +169,11 @@ a:focus-visible {
   font-weight: 700;
   margin-bottom: 10px;
 }
+.section-heading .eyebrow,
+.about .eyebrow {
+  font-size: 1.35rem;
+  margin-bottom: 10px;
+}
 .intro p:not(.eyebrow) {
   max-width: 600px;
   margin: 0 auto 24px;

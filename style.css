@@ -60,14 +60,17 @@ a { color: inherit; text-decoration: none; }
     /* محو شدن پایین عکس در رنگ صفحه */
     linear-gradient(180deg, transparent 55%, rgba(241,233,220,.6) 80%, var(--cream) 100%),
     /* کمی روشن‌تر کردن پشت متن برای خوانایی */
-    radial-gradient(ellipse 45% 35% at 50% 48%, rgba(241,233,220,.5), transparent 100%),
-    url("images/hero.jpg") center / cover no-repeat,
+    radial-gradient(var(--veil, ellipse 50% 38%) at 50% 50%, rgba(241,233,220,.78), rgba(241,233,220,0) 100%),
+    /* روشن کردن بالای صفحه برای خوانایی منو */
+    linear-gradient(180deg, rgba(241,233,220,.55) 0%, rgba(241,233,220,0) 16%),
+    var(--hero-photo, url("images/hero.jpg")) center / cover no-repeat,
     /* تا وقتی عکس نیست: آسمان، دریا و ساحل */
     radial-gradient(circle at 28% 30%, rgba(255,246,214,.95) 0 4%, rgba(255,246,214,.35) 9%, transparent 22%),
     linear-gradient(180deg, #dfe5e1 0%, #d2dddb 38%, #b9cdcd 50%, #9ebabe 58%, #a9c3c2 68%, #dccfb8 76%, #eae0cf 100%);
 }
 
 .top .nav { width: min(1160px, calc(100% - 48px)); }
+.top .nav nav { color: var(--brown); }
 
 .hero {
   flex: 1;
@@ -308,7 +311,7 @@ footer p { margin: 0; }
   }
   .nav nav { display: none; }
 
-  .top { min-height: 88vh; }
+  .top { min-height: 88vh; --veil: ellipse 95% 32%; }
   .top .nav, .hero { width: min(100% - 30px, 1160px); }
   .hero { padding: 20px 0 120px; }
   .hero-copy { padding: 0 8px; }

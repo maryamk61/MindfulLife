@@ -204,7 +204,9 @@ a:focus-visible {
   gap: 12px;
 }
 .platforms a {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   padding: 9px 20px;
   border: 1px solid var(--line);
   border-radius: 999px;
@@ -212,6 +214,7 @@ a:focus-visible {
   color: var(--brown);
   transition: background .2s ease, border-color .2s ease;
 }
+.platforms .icon { width: 18px; height: 18px; flex: none; }
 .platforms a:hover { background: var(--white); border-color: rgba(78,73,66,.25); }
 
 .packages { padding-bottom: 150px; }
@@ -337,6 +340,8 @@ footer p { margin: 0; text-align: center; }
     width: min(100% - 30px, 960px);
   }
   .intro { padding: 0 0 100px; }
+  .platforms { gap: 8px; }
+  .platforms a { padding: 8px 14px; gap: 6px; }
   .packages { padding-bottom: 100px; }
   .package-grid { grid-template-columns: 1fr; gap: 18px; }
   .package-card { padding: 32px 26px 28px; }

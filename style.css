@@ -307,7 +307,7 @@ a:focus-visible {
 
 .about {
   border-top: 1px solid var(--line);
-  padding: 110px 0 130px;
+  padding: 50px 0 120px;
   text-align: center;
 }
 .about-mark {
@@ -376,7 +376,7 @@ footer p { margin: 0; text-align: center; }
   .packages { padding-bottom: 100px; }
   .package-grid { grid-template-columns: 1fr; gap: 18px; }
   .package-card { padding: 32px 26px 28px; }
-  .about { padding: 80px 0 90px; }
+  .about { padding: 40px 0 90px; }
   footer {
     width: min(100% - 30px, 1160px);
     grid-template-columns: 1fr;

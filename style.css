@@ -47,8 +47,8 @@ a.logo {
   gap: 12px;
 }
 .logo-avatar {
-  width: 46px;
-  height: 46px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid rgba(255,250,242,.7);
@@ -368,7 +368,7 @@ footer p { margin: 0; text-align: center; }
 
   .top { min-height: 88vh; --veil: ellipse 95% 32%; }
   .top .nav, .hero { width: min(100% - 30px, 1160px); }
-  .logo-avatar { width: 38px; height: 38px; }
+  .logo-avatar { width: 32px; height: 32px; }
   a.logo { gap: 10px; font-size: 1.1rem; }
   .hero { padding: 20px 0 120px; }
   .hero-copy { padding: 0 8px; }

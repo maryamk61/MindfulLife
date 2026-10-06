@@ -108,7 +108,7 @@ h1 em {
 
 .hero-text {
   max-width: 480px;
-  color: var(--brown);
+  color: #6a635a;
   font-size: 1.2rem;
   font-weight: 500;
   margin-bottom: 32px;

@@ -8,7 +8,7 @@
   --brown: #4e4942;
   --muted: #817a70;
   --white: #fffaf2;
-  --sea: #a7c1c7;
+  --sea: #c9dadd;
   --line: rgba(78,73,66,.13);
 }
 
@@ -270,12 +270,6 @@ a:focus-visible {
 }
 .button-light:hover { background: var(--white); }
 
-.packages-note {
-  margin: 28px 0 0;
-  text-align: center;
-  color: var(--muted);
-  font-size: .8rem;
-}
 
 .about {
   border-top: 1px solid var(--line);

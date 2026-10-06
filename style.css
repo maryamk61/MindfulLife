@@ -36,16 +36,16 @@ a { color: inherit; text-decoration: none; }
 }
 
 .logo {
-  font-size: 1.15rem;
+  font-size: 1.3rem;
   font-weight: 600;
   letter-spacing: -.03em;
 }
 
 .nav nav {
   display: flex;
-  gap: 34px;
+  gap: 38px;
   color: var(--muted);
-  font-size: .88rem;
+  font-size: 1rem;
 }
 
 .nav nav a { transition: color .2s ease; }
@@ -63,10 +63,8 @@ a { color: inherit; text-decoration: none; }
     radial-gradient(var(--veil, ellipse 50% 38%) at 50% 50%, rgba(241,233,220,.78), rgba(241,233,220,0) 100%),
     /* روشن کردن بالای صفحه برای خوانایی منو */
     linear-gradient(180deg, rgba(241,233,220,.55) 0%, rgba(241,233,220,0) 16%),
-    var(--hero-photo, url("images/hero.jpg")) center / cover no-repeat,
-    /* تا وقتی عکس نیست: آسمان، دریا و ساحل */
-    radial-gradient(circle at 28% 30%, rgba(255,246,214,.95) 0 4%, rgba(255,246,214,.35) 9%, transparent 22%),
-    linear-gradient(180deg, #dfe5e1 0%, #d2dddb 38%, #b9cdcd 50%, #9ebabe 58%, #a9c3c2 68%, #dccfb8 76%, #eae0cf 100%);
+    url("images/hero.jpg") center / cover no-repeat,
+    var(--cream-deep);
 }
 
 .top .nav { width: min(1160px, calc(100% - 48px)); }
@@ -109,9 +107,10 @@ h1 em {
 }
 
 .hero-text {
-  max-width: 390px;
-  color: var(--muted);
-  font-size: 1rem;
+  max-width: 480px;
+  color: var(--brown);
+  font-size: 1.2rem;
+  font-weight: 500;
   margin-bottom: 32px;
 }
 
@@ -136,6 +135,12 @@ h1 em {
   flex-wrap: wrap;
 }
 
+.hero-actions .text-link {
+  color: var(--brown);
+  font-weight: 600;
+  border-bottom-color: rgba(78,73,66,.5);
+}
+
 a:focus-visible {
   outline: 2px solid var(--sage-dark);
   outline-offset: 3px;
@@ -157,10 +162,17 @@ a:focus-visible {
   letter-spacing: -.04em;
   line-height: 1.4;
 }
+.intro .eyebrow {
+  color: var(--sage);
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
 .intro p:not(.eyebrow) {
   max-width: 600px;
   margin: 0 auto 24px;
-  color: var(--muted);
+  color: #5f5850;
+  font-weight: 500;
   font-size: .98rem;
 }
 

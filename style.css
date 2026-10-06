@@ -53,8 +53,6 @@ a.logo {
   object-fit: cover;
   border: 2px solid rgba(255,250,242,.7);
   box-shadow: 0 1px 6px rgba(78,73,66,.06);
-  /* رنگ‌های تصویر ملایم‌تر تا با صفحه هماهنگ باشد */
-  filter: saturate(.6) brightness(1.06);
 }
 
 .nav nav {

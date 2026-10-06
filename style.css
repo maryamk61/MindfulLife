@@ -8,6 +8,7 @@
   --brown: #4e4942;
   --muted: #817a70;
   --white: #fffdf9;
+  --sand: #ddd3c3;
   --line: rgba(78,73,66,.13);
 }
 
@@ -114,6 +115,18 @@ h1 em {
 .button:hover { transform: translateY(-2px); background: #3f3b36; }
 .button span { font-size: 1.1rem; }
 
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--sage-dark);
+  outline-offset: 3px;
+}
+
 .hero-image {
   position: relative;
   height: 580px;
@@ -167,7 +180,7 @@ h1 em {
 .water-lines span:nth-child(4) { transform: scaleX(.52); }
 .water-lines span:nth-child(5) { transform: scaleX(.72); }
 
-.intro, .programs, .about {
+.intro, .packages, .about {
   width: min(960px, calc(100% - 48px));
   margin-left: auto;
   margin-right: auto;
@@ -200,56 +213,97 @@ h1 em {
   padding-bottom: 3px;
 }
 
-.programs {
-  padding-bottom: 150px;
+.platforms {
+  list-style: none;
+  margin: 34px 0 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
 }
-.section-heading { margin-bottom: 34px; }
+.platforms a {
+  display: inline-block;
+  padding: 9px 20px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: .85rem;
+  color: var(--brown);
+  transition: background .2s ease, border-color .2s ease;
+}
+.platforms a:hover { background: var(--white); border-color: rgba(78,73,66,.25); }
 
-.program-card {
-  position: relative;
-  min-height: 340px;
-  overflow: hidden;
+.packages { padding-bottom: 150px; }
+.section-heading { margin-bottom: 40px; text-align: center; }
+
+.package-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.package-card {
   border-radius: 24px;
   background: var(--sage);
-  padding: 46px 50px;
-  display: grid;
-  grid-template-columns: 90px 1fr 130px;
-  gap: 25px;
-  align-items: start;
+  padding: 40px 38px 36px;
+  display: flex;
+  flex-direction: column;
 }
-.program-number {
-  font-size: .8rem;
-  opacity: .65;
-}
-.card-label {
+.package-card--sand { background: var(--sand); }
+
+.package-top {
+  display: flex;
+  justify-content: space-between;
   font-size: .78rem;
-  margin-bottom: 8px;
   opacity: .7;
+  margin-bottom: 26px;
 }
-.program-content h3 {
-  font-size: clamp(2rem, 4vw, 3.3rem);
+.package-card h3 {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
   font-weight: 400;
   letter-spacing: -.04em;
-  margin-bottom: 12px;
+  line-height: 1.4;
+  margin-bottom: 10px;
 }
-.program-content > p:not(.card-label) {
-  max-width: 520px;
-  color: rgba(78,73,66,.78);
-  margin-bottom: 28px;
+.package-desc {
+  color: rgba(78,73,66,.82);
+  margin-bottom: 22px;
 }
+
+.package-list {
+  list-style: none;
+  margin: 0 0 32px;
+  padding: 0;
+  font-size: .9rem;
+  color: rgba(78,73,66,.82);
+}
+.package-list li {
+  padding: 9px 0;
+  border-top: 1px solid rgba(78,73,66,.14);
+}
+
+.package-footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.price { margin: 0; font-size: .85rem; }
+.price strong { font-size: 1.5rem; font-weight: 500; margin-left: 4px; }
+
 .button-light {
   background: var(--white);
   color: var(--brown);
 }
 .button-light:hover { background: var(--white); }
 
-.leaf-mark {
-  font-size: 6rem;
-  font-weight: 200;
-  opacity: .35;
-  transform: rotate(-25deg);
-  align-self: center;
-  justify-self: center;
+.packages-note {
+  margin: 28px 0 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: .8rem;
 }
 
 .about {
@@ -283,6 +337,13 @@ footer {
   font-size: .78rem;
 }
 footer p { margin: 0; }
+.footer-link { border-bottom: 1px solid var(--line); }
+.footer-link:hover { color: var(--brown); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}
 
 @media (max-width: 760px) {
   .nav {
@@ -308,17 +369,13 @@ footer p { margin: 0; }
     border-radius: 150px 150px 16px 16px;
   }
 
-  .intro, .programs, .about {
+  .intro, .packages, .about {
     width: min(100% - 30px, 960px);
   }
   .intro { padding: 105px 0 100px; }
-  .programs { padding-bottom: 100px; }
-  .program-card {
-    grid-template-columns: 1fr;
-    padding: 32px 28px;
-    min-height: auto;
-  }
-  .leaf-mark { display: none; }
+  .packages { padding-bottom: 100px; }
+  .package-grid { grid-template-columns: 1fr; gap: 18px; }
+  .package-card { padding: 32px 26px 28px; }
   .about {
     padding: 80px 0 90px;
     grid-template-columns: 1fr;

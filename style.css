@@ -4,6 +4,7 @@
   --cream: #f1e9dc;
   --cream-deep: #e7dccb;
   --sage: #9aa895;
+  --sage-soft: #b3bead;
   --sage-dark: #71806d;
   --brown: #4e4942;
   --muted: #817a70;
@@ -217,7 +218,7 @@ a:focus-visible {
 
 .package-card {
   border-radius: 24px;
-  background: var(--sage);
+  background: var(--sage-soft);
   padding: 40px 38px 36px;
   display: flex;
   flex-direction: column;

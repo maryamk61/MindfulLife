@@ -76,8 +76,7 @@
           </ul>
           <div class="package-footer">
             <p class="price"><strong>۵۹۰٬۰۰۰</strong> تومان</p>
-            <!-- لینک صفحه‌ی پرداخت این پکیج -->
-            <a class="button button-light" href="#">مشاهده پکیج <span aria-hidden="true">←</span></a>
+            <button class="button button-light" type="button" data-open="package-1">مشاهده پکیج <span aria-hidden="true">←</span></button>
           </div>
         </article>
 
@@ -127,5 +126,84 @@
       <a class="footer-link" href="mailto:mindful.life.with.meditation@gmail.com"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg>ایمیل</a>
     </div>
   </footer>
+  <!-- جزئیات پکیج ۱ -->
+  <dialog class="modal" id="package-1" aria-labelledby="package-1-title">
+    <div class="modal-inner">
+      <button class="modal-close" type="button" data-close aria-label="بستن">×</button>
+      <p class="card-label">برنامه ۷ روزه</p>
+      <h3 id="package-1-title">۷ روز رها کردن</h3>
+      <p class="modal-intro">هر روز یک مدیتیشن حدود ۱۵ دقیقه‌ای؛ این مسیری است که با هم می‌رویم:</p>
+      <!-- توضیح هر روز را اینجا بنویس -->
+      <ol class="day-list">
+        <li>
+          <span class="day-num">روز ۱</span>
+          <div>
+            <h4>توقف</h4>
+            <p>چند دقیقه مکث، نفس آگاهانه و دیدن آنچه این روزها روی دلت سنگینی می‌کند.</p>
+          </div>
+        </li>
+        <li>
+          <span class="day-num">روز ۲</span>
+          <div>
+            <h4>پذیرش</h4>
+            <p>به‌جای جنگیدن با احساس‌ها، یاد می‌گیریم کنارشان بنشینیم و بپذیریمشان.</p>
+          </div>
+        </li>
+        <li>
+          <span class="day-num">روز ۳</span>
+          <div>
+            <h4>بدن</h4>
+            <p>با اسکن بدن، تنش‌هایی را که بی‌آنکه بدانیم نگه داشته‌ایم پیدا می‌کنیم و رها می‌کنیم.</p>
+          </div>
+        </li>
+        <li>
+          <span class="day-num">روز ۴</span>
+          <div>
+            <h4>فکرها</h4>
+            <p>فکرها را مثل ابرهایی تماشا می‌کنیم که می‌آیند و می‌روند، بدون اینکه دنبالشان برویم.</p>
+          </div>
+        </li>
+        <li>
+          <span class="day-num">روز ۵</span>
+          <div>
+            <h4>گذشته</h4>
+            <p>با مهربانی به خودمان، بار آنچه گذشته را کمی سبک‌تر می‌کنیم.</p>
+          </div>
+        </li>
+        <li>
+          <span class="day-num">روز ۶</span>
+          <div>
+            <h4>کنترل</h4>
+            <p>آنچه در اختیار ما نیست را می‌شناسیم و آرام‌آرام رهایش می‌کنیم.</p>
+          </div>
+        </li>
+        <li>
+          <span class="day-num">روز ۷</span>
+          <div>
+            <h4>آرامش</h4>
+            <p>مرور مسیر هفت روز و برگشتن به آرامشی که همیشه در درونت بوده.</p>
+          </div>
+        </li>
+      </ol>
+      <div class="modal-footer">
+        <p class="price"><strong>۵۹۰٬۰۰۰</strong> تومان</p>
+        <!-- لینک صفحه‌ی پرداخت این پکیج -->
+        <a class="button" href="#">خرید پکیج <span aria-hidden="true">←</span></a>
+      </div>
+    </div>
+  </dialog>
+
+  <script>
+    document.querySelectorAll('[data-open]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        document.getElementById(btn.dataset.open).showModal();
+      });
+    });
+    document.querySelectorAll('.modal').forEach(function (modal) {
+      modal.addEventListener('click', function (e) {
+        if (e.target === modal || e.target.closest('[data-close]')) modal.close();
+      });
+    });
+  </script>
 </body>
 </html>

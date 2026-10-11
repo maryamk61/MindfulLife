@@ -143,6 +143,12 @@ h1 em {
   font-size: .88rem;
   transition: transform .2s ease, background .2s ease;
 }
+button.button {
+  font: inherit;
+  font-size: .88rem;
+  border: 0;
+  cursor: pointer;
+}
 .button:hover { transform: translateY(-2px); background: #3f3b36; }
 .button span { font-size: 1.1rem; }
 
@@ -342,6 +348,100 @@ footer {
   color: var(--muted);
   font-size: .78rem;
 }
+/* پنجره‌ی جزئیات پکیج */
+.modal {
+  width: min(560px, calc(100% - 32px));
+  max-height: 86vh;
+  padding: 0;
+  border: 0;
+  border-radius: 24px;
+  background: var(--white);
+  color: var(--brown);
+  box-shadow: 0 20px 60px rgba(78,73,66,.18);
+}
+.modal::backdrop {
+  background: rgba(78,73,66,.35);
+  backdrop-filter: blur(3px);
+}
+.modal[open] { animation: modal-in .25s ease; }
+@keyframes modal-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: none; }
+}
+.modal-inner {
+  position: relative;
+  padding: 40px 40px 32px;
+}
+.modal-close {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--cream);
+  color: var(--muted);
+  font: inherit;
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.modal-close:hover { color: var(--brown); }
+.modal .card-label { color: var(--sage-dark); }
+.modal h3 {
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: -.04em;
+  margin-bottom: 8px;
+}
+.modal-intro {
+  color: var(--muted);
+  font-size: .92rem;
+  margin-bottom: 20px;
+}
+.day-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.day-list li {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 12px;
+  padding: 14px 0;
+  border-top: 1px solid var(--line);
+}
+.day-num {
+  color: var(--sage-dark);
+  font-size: .8rem;
+  font-weight: 500;
+  padding-top: 3px;
+}
+.day-list h4 {
+  margin: 0 0 2px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.day-list p {
+  margin: 0;
+  color: var(--muted);
+  font-size: .88rem;
+  line-height: 1.8;
+}
+.modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  position: sticky;
+  bottom: 0;
+  margin: 0 -40px -32px;
+  padding: 18px 40px 24px;
+  background: var(--white);
+  border-top: 1px solid var(--line);
+}
+
 footer .logo { font-size: 1rem; }
 footer p { margin: 0; text-align: center; }
 .footer-links { justify-self: end; display: flex; gap: 20px; }
@@ -392,4 +492,7 @@ footer p { margin: 0; text-align: center; }
     gap: 8px;
   }
   .footer-links { justify-self: center; }
+  .modal-inner { padding: 32px 22px 24px; }
+  .modal-footer { margin: 0 -22px -24px; padding: 16px 22px 20px; }
+  .modal h3 { font-size: 1.6rem; }
 }
